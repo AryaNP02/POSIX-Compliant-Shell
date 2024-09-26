@@ -1,0 +1,4 @@
+cd iddas
+ls
+ls -a
+ls -a .. -l
