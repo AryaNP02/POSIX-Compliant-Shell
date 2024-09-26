@@ -1,8 +1,7 @@
-# Advanced Operating Systems
 
-## Assignment 2: POSIX Shell Implementation
+# POSIX Shell Implementation
 
-This project is an implementation of a POSIX-compliant shell for an advanced operating systems course.
+This project is an implementation of a POSIX-compliant shell .
 
 ## How to Run
 
@@ -17,9 +16,11 @@ To execute the shell, follow these steps:
 
 2. **Run**
 
-   You can now run the shell using  < ./shell.out >
-
-3. **Alternative approach**
+   You can now run the shell as: 
+```
+     ./shell.out 
+```
+4. **Alternative approach**
 
    ```bash
      g++ main.cpp setup.cpp doubleLinkList.cpp cd.cpp echo.cpp pwd.cpp ls.cpp pinfo.cpp search.cpp history.cpp redirection.cpp 
@@ -27,7 +28,7 @@ To execute the shell, follow these steps:
 
    Then follow step 2 .
 
-## Assignment Structure
+## Project Structure
 
 - **`main.cpp`**: Initializes signal handling, command history, autocomplete functionality, and input parsing.
 
@@ -85,16 +86,11 @@ To execute the shell, follow these steps:
 
 12. **History**: Manage up to 20 commands with the `history` command, display up to 10 commands by default, support `history <num>`, and handle UP arrow key navigation.
 
-## Common Assumptions
 
-- It is expected that the commands behave similarly to an actual terminal environment.
-- Escape characters are not used, which might result in some unexpected behavior.
-- History command will also record the incorrect command.
+## Additional Features
 
-## Additional Notes
+- If the received command matches any of the listed commands (above), it will be handled according to the implementation, even if it is part of a pipeline or redirection. However, if the command involves piping or redirection and doesn't meet the specified structure mentioned above, unexpected behavior may occur.
 
-- If the command received matches any listed commands, it will be handled according to my implementation even if its present inside pipeline or redirection . However, if the command involves piping or redirection, there might be unexpected behavior if it doesn’t align with requirenment given.
-
-- Anything inside Quotes are handled as strings in the implementation, and error handling (for all commands) is done according to the provided assignment specifications.
+- Anything inside Quotes are handled as strings in the implementation, and additionaly  escape sequences are handeled.
 
 - The terminal can execute other shell script.
